@@ -1,0 +1,753 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@200;400;800&display=swap");
+html,
+body {
+  box-sizing: border-box;
+  font-family: "Nunito", sans-serif;
+  font-size: 16px;
+  background-color: #fae08d;
+  background-position: center;
+  background-size: cover;
+}
+* {
+  z-index: 1000;
+}
+.wrapper {
+  width: 80%;
+  height: 100vh;
+  display: flex;
+  margin: auto;
+  align-items: center;
+}
+
+.header-login {
+  display: flex;
+  justify-content: right;
+  order: 1;
+  align-items: center;
+  gap: 2.5rem;
+}
+.note-logo {
+  width: 20%;
+}
+.container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  height: 25rem;
+}
+.login-container {
+  width: 50%;
+  order: 2;
+  background-color: white;
+  box-shadow: rgba(0, 0, 0, 0.25) 2.4px 2.4px 3.9px;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.titre {
+  width: 75%;
+  padding: 2rem 1rem 0rem 0rem;
+  font-size: 1.5rem;
+  font-weight: 600;
+  text-align: center;
+  color: #403c18;
+  font-style: italic;
+}
+.titre span {
+  font-size: 1rem;
+  color: #707070;
+}
+.credentiels {
+  width: 60%;
+  margin-top: 0rem;
+  margin-left: auto;
+  margin-right: auto;
+  order: 3;
+}
+.credentiels .sub1 {
+  width: 100%;
+  height: 1.9rem;
+  border: 0.2px solid rgb(41, 41, 18);
+  border-radius: 0.5px;
+  margin-top: 0.7rem;
+  padding-left: 0.2rem;
+}
+.sub {
+  margin-top: 0.7rem;
+  width: 100%;
+  height: 2.1rem;
+  border-radius: 0.5px;
+  color: #fff;
+  font-weight: 800;
+  background-color: #ffc400;
+  border: none;
+  font-style: italic;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.sub:hover,
+.sub:focus {
+  background-color: #ffcf33;
+  transform: translateY(-3px);
+  box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+}
+.credentiels a {
+  text-decoration: none;
+  color: #9c9c9c;
+  font-size: 0.8rem;
+}
+.ios {
+  margin-top: 0.5rem;
+  border-top: 1px solid #9d9d9d;
+  order: 4;
+  text-align: center;
+}
+
+.ios span a {
+  color: #3d64e4;
+}
+.signup-container {
+  width: 50%;
+  background-image: url("../assets/abstract-luxury-clear-yellow-wall-well-use-as-backdrop-background-and-layout\ \(1\).jpg");
+  background-position: center;
+  background-size: cover;
+  text-align: center;
+  box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+}
+.text {
+  width: 100%;
+  color: #fff;
+  font-size: 1.9rem;
+  font-weight: 900;
+  margin-top: 6rem;
+  margin-bottom: 2rem;
+  font-style: italic;
+}
+.text span {
+  color: rgb(78, 59, 17);
+  font-size: 1.5rem;
+}
+.signup-container a {
+  padding: 0.7rem 1.7rem;
+  background-color: #fff;
+  color: #ffc400;
+  font-size: 1.5rem;
+  font-weight: 900;
+  font-style: italic;
+  border: none;
+  border-radius: 1rem;
+  text-decoration: none;
+  box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+  transition: 0.3s;
+}
+.signup-container a:hover {
+  background-color: #fffbc2;
+  transform: translateX(5px);
+}
+.red2 {
+  background-color: #ffa5a5 !important;
+  border: 2px solid #ee4343;
+  border-radius: 4px;
+  outline: none;
+}
+.error {
+  width: 40%;
+  display: flex;
+  justify-content: left;
+  flex-wrap: wrap;
+  margin-top: 1.5rem;
+  gap: 0.5rem;
+  order: 2;
+}
+.error_logo {
+  height: 24px;
+}
+.error_text {
+  color: #ff0000;
+  height: 24px;
+  font-weight: 700;
+}
+@media(max-width:1600px) {
+  
+}
+@media (max-width:850PX) {
+
+  .signup-container{
+    display: none;
+  }
+  .login-container{
+    width: 70%;
+  }
+  
+}
+
+@media screen and (max-width: 685px) {
+  .container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    height: 25rem;
+  }
+  .login-container {
+    width: 50%;
+    order: 2;
+    box-shadow: rgba(0, 0, 0, 0.25) 2.4px 2.4px 3.9px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .titre {
+    width: 100%;
+    padding: 2rem 1rem 0rem 0rem;
+    font-size: 1.5rem;
+    font-weight: 600;
+    text-align: center;
+    color: #403c18;
+    font-style: italic;
+  }
+  .titre span {
+    font-size: 1rem;
+    color: #707070;
+  }
+  .credentiels {
+    width: 70%;
+    margin-top: 0rem;
+    margin-left: auto;
+    margin-right: auto;
+    order: 3;
+  }
+  .credentiels .sub1 {
+    width: 100%;
+    height: 1.9rem;
+    border: 0.2px solid rgb(41, 41, 18);
+    border-radius: 0.5px;
+    margin-top: 0.4rem;
+    padding-left: 0.2rem;
+  }
+  .sub {
+    margin-top: 0.4rem;
+    width: 100%;
+    height: 2.1rem;
+    border-radius: 0.5px;
+    color: #fff;
+    font-weight: 800;
+    background-color: #ffc400;
+    border: none;
+    font-style: italic;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+  .sub:hover,
+  .sub:focus {
+    background-color: #ffcf33;
+    transform: translateY(-3px);
+    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+  }
+  .credentiels a {
+    text-decoration: none;
+    color: #9c9c9c;
+    font-size: 0.8rem;
+  }
+  .ios {
+    margin-top: 0.5rem;
+    border-top: 1px solid #9d9d9d;
+    order: 4;
+    text-align: center;
+  }
+
+  .ios span a {
+    color: #3d64e4;
+  }
+  .signup-container {
+    width: 50%;
+    background-image: url("../assets/abstract-luxury-clear-yellow-wall-well-use-as-backdrop-background-and-layout\ \(1\).jpg");
+    background-position: center;
+    background-size: cover;
+    text-align: center;
+    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+  }
+  .text {
+    width: 100%;
+    color: #fff;
+    font-size: 1.9rem;
+    font-weight: 900;
+    margin-top: 6rem;
+    margin-bottom: 2rem;
+    font-style: italic;
+  }
+  .text span {
+    color: rgb(78, 59, 17);
+    font-size: 1.5rem;
+  }
+  .signup-container a {
+    padding: 0.7rem 1.7rem;
+    background-color: #fff;
+    color: #ffc400;
+    font-size: 1.5rem;
+    font-weight: 900;
+    font-style: italic;
+    border: none;
+    border-radius: 1rem;
+    text-decoration: none;
+    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+    transition: 0.3s;
+  }
+  .signup-container a:hover {
+    background-color: #fffbc2;
+    transform: translateX(5px);
+  }
+  .red2 {
+    background-color: #ffa5a5 !important;
+    border: 2px solid #ee4343;
+    border-radius: 4px;
+    outline: none;
+  }
+  .error {
+    width: 100%;
+    display: flex;
+    justify-content: left;
+    flex-wrap: wrap;
+    margin-top: 1.5rem;
+    gap: 0.5rem;
+    order: 2;
+  }
+  .error_logo {
+    height: 24px;
+  }
+  .error_text {
+    color: #ff0000;
+    height: 24px;
+    font-weight: 700;
+  }
+}
+
+@media screen and (max-width: 590px) {
+  .container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    height: 25rem;
+  }
+  .login-container {
+    width: 100%;
+
+  }
+  .titre {
+    width: 100%;
+    padding: 2rem 1rem 0rem 0rem;
+    font-size: 1.5rem;
+    font-weight: 600;
+    text-align: center;
+    color: #403c18;
+    font-style: italic;
+  }
+  .titre span {
+    font-size: 0.8rem;
+    color: #707070;
+  }
+  .credentiels {
+    width: 80%;
+    margin-top: 0rem;
+    margin-left: auto;
+    margin-right: auto;
+    order: 3;
+  }
+  .credentiels .sub1 {
+    width: 100%;
+    height: 1.9rem;
+    border: 0.2px solid rgb(41, 41, 18);
+    border-radius: 0.5px;
+    margin-top: 0.4rem;
+    padding-left: 0.2rem;
+  }
+  .sub {
+    margin-top: 0.4rem;
+    width: 100%;
+    height: 2.1rem;
+    border-radius: 0.5px;
+    color: #fff;
+    font-weight: 800;
+    background-color: #ffc400;
+    border: none;
+    font-style: italic;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+  .sub:hover,
+  .sub:focus {
+    background-color: #ffcf33;
+    transform: translateY(-3px);
+    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+  }
+  .credentiels a {
+    text-decoration: none;
+    color: #9c9c9c;
+    font-size: 0.8rem;
+  }
+  .ios {
+    margin-top: 0.5rem;
+    border-top: 1px solid #9d9d9d;
+    order: 4;
+    text-align: center;
+  }
+
+  .ios span a {
+    color: #3d64e4;
+  }
+  .signup-container {
+    width: 50%;
+    background-image: url("../assets/abstract-luxury-clear-yellow-wall-well-use-as-backdrop-background-and-layout\ \(1\).jpg");
+    background-position: center;
+    background-size: cover;
+    text-align: center;
+    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+  }
+  .text {
+    width: 100%;
+    color: #fff;
+    font-size: 1.9rem;
+    font-weight: 900;
+    margin-top: 6rem;
+    margin-bottom: 2rem;
+    font-style: italic;
+  }
+  .text span {
+    color: rgb(78, 59, 17);
+    font-size: 1.2rem;
+  }
+  .signup-container a {
+    padding: 0.7rem 1.7rem;
+    background-color: #fff;
+    color: #ffc400;
+    font-size: 1.2rem;
+    font-weight: 900;
+    font-style: italic;
+    border: none;
+    border-radius: 1rem;
+    text-decoration: none;
+    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+    transition: 0.3s;
+  }
+  .signup-container a:hover {
+    background-color: #fffbc2;
+    transform: translateX(5px);
+  }
+  .red2 {
+    background-color: #ffa5a5 !important;
+    border: 2px solid #ee4343;
+    border-radius: 4px;
+    outline: none;
+  }
+  .error {
+    width: 100%;
+    display: flex;
+    justify-content: left;
+    flex-wrap: wrap;
+    margin-top: 1.5rem;
+    gap: 0.5rem;
+    order: 2;
+  }
+  .error_logo {
+    height: 24px;
+  }
+  .error_text {
+    color: #ff0000;
+    height: 24px;
+    font-weight: 700;
+  }
+}
+@media only screen and (max-width: 515px) {
+  .container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    height: 25rem;
+  }
+  .login-container {
+    width: 50%;
+    order: 2;
+    box-shadow: rgba(0, 0, 0, 0.25) 2.4px 2.4px 3.9px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .titre {
+    width: 100%;
+    padding: 2rem 1rem 0rem 0rem;
+    font-size: 1.1rem;
+    font-weight: 600;
+    text-align: center;
+    color: #403c18;
+    font-style: italic;
+  }
+  .titre span {
+    font-size: 0.6rem;
+    color: #707070;
+  }
+  .credentiels {
+    width: 80%;
+    margin-top: 0rem;
+    margin-left: auto;
+    margin-right: auto;
+    order: 3;
+  }
+  .credentiels .sub1 {
+    width: 100%;
+    height: 1.9rem;
+    border: 0.2px solid rgb(41, 41, 18);
+    border-radius: 0.5px;
+    margin-top: 0.4rem;
+    padding-left: 0.2rem;
+  }
+  .sub {
+    margin-top: 0.4rem;
+    width: 100%;
+    height: 2.1rem;
+    border-radius: 0.5px;
+    color: #fff;
+    font-weight: 800;
+    background-color: #ffc400;
+    border: none;
+    font-style: italic;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+  .sub:hover,
+  .sub:focus {
+    background-color: #ffcf33;
+    transform: translateY(-3px);
+    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+  }
+  .credentiels a {
+    text-decoration: none;
+    color: #9c9c9c;
+    font-size: 0.8rem;
+  }
+  .ios {
+    margin-top: 0.5rem;
+    border-top: 1px solid #9d9d9d;
+    order: 4;
+    text-align: center;
+  }
+
+  .ios span a {
+    color: #3d64e4;
+  }
+  .signup-container {
+    width: 50%;
+    background-image: url("../assets/abstract-luxury-clear-yellow-wall-well-use-as-backdrop-background-and-layout\ \(1\).jpg");
+    background-position: center;
+    background-size: cover;
+    text-align: center;
+    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+  }
+  .text {
+    width: 100%;
+    color: #fff;
+    font-size: 1.9rem;
+    font-weight: 900;
+    margin-top: 6rem;
+    margin-bottom: 2rem;
+    font-style: italic;
+  }
+  .text span {
+    color: rgb(78, 59, 17);
+    font-size: 1.2rem;
+  }
+  .signup-container a {
+    padding: 0.7rem 1.7rem;
+    background-color: #fff;
+    color: #ffc400;
+    font-size: 1rem;
+    font-weight: 900;
+    font-style: italic;
+    border: none;
+    border-radius: 1rem;
+    text-decoration: none;
+    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+    transition: 0.3s;
+  }
+  .signup-container a:hover {
+    background-color: #fffbc2;
+    transform: translateX(5px);
+  }
+  .red2 {
+    background-color: #ffa5a5 !important;
+    border: 2px solid #ee4343;
+    border-radius: 4px;
+    outline: none;
+  }
+  .error {
+    width: 100%;
+    display: flex;
+    justify-content: left;
+    flex-wrap: wrap;
+    margin-top: 1.5rem;
+    gap: 0.5rem;
+    order: 2;
+  }
+  .error_logo {
+    height: 24px;
+  }
+  .error_text {
+    color: #ff0000;
+    height: 24px;
+    font-weight: 700;
+  }
+}
+@media only screen and (max-width: 440px) {
+  .container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    height: 25rem;
+  }
+  .login-container {
+    width: 100%;
+    order: 2;
+    box-shadow: rgba(0, 0, 0, 0.25) 2.4px 2.4px 3.9px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .titre {
+    width: 100%;
+    padding: 2rem 1rem 0rem 0rem;
+    font-size: 1.1rem;
+    font-weight: 600;
+    text-align: center;
+    color: #403c18;
+    font-style: italic;
+  }
+  .titre span {
+    font-size: 0.6rem;
+    color: #707070;
+  }
+  .credentiels {
+    width: 80%;
+    margin-top: 0rem;
+    margin-left: auto;
+    margin-right: auto;
+    order: 3;
+  }
+  .credentiels .sub1 {
+    width: 100%;
+    height: 1.9rem;
+    border: 0.2px solid rgb(41, 41, 18);
+    border-radius: 0.5px;
+    margin-top: 0.4rem;
+    padding-left: 0.2rem;
+  }
+  .sub {
+    margin-top: 0.4rem;
+    width: 100%;
+    height: 2.1rem;
+    border-radius: 0.5px;
+    color: #fff;
+    font-weight: 800;
+    background-color: #ffc400;
+    border: none;
+    font-style: italic;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+  .sub:hover,
+  .sub:focus {
+    background-color: #ffcf33;
+    transform: translateY(-3px);
+    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+  }
+  .credentiels a {
+    text-decoration: none;
+    color: #9c9c9c;
+    font-size: 0.8rem;
+  }
+  .ios {
+    margin-top: 0.5rem;
+    border-top: 1px solid #9d9d9d;
+    order: 4;
+    text-align: center;
+  }
+
+  .ios span a {
+    color: #3d64e4;
+  }
+  .signup-container {
+    width: 50%;
+    background-image: url("../assets/abstract-luxury-clear-yellow-wall-well-use-as-backdrop-background-and-layout\ \(1\).jpg");
+    background-position: center;
+    background-size: cover;
+    text-align: center;
+    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+  }
+  .text {
+    width: 100%;
+    color: #fff;
+    font-size: 1.9rem;
+    font-weight: 900;
+    margin-top: 6rem;
+    margin-bottom: 2rem;
+    font-style: italic;
+  }
+  .text span {
+    color: rgb(78, 59, 17);
+    font-size: 1.2rem;
+  }
+  .signup-container a {
+    padding: 0.7rem 1.7rem;
+    background-color: #fff;
+    color: #ffc400;
+    font-size: 0.8rem;
+    font-weight: 900;
+    font-style: italic;
+    border: none;
+    border-radius: 1rem;
+    text-decoration: none;
+    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+    transition: 0.3s;
+  }
+  .signup-container a:hover {
+    background-color: #fffbc2;
+    transform: translateX(5px);
+  }
+  .red2 {
+    background-color: #ffa5a5 !important;
+    border: 2px solid #ee4343;
+    border-radius: 4px;
+    outline: none;
+  }
+  .error {
+    width: 100%;
+    display: flex;
+    justify-content: left;
+    flex-wrap: wrap;
+    margin-top: 1.5rem;
+    gap: 0.5rem;
+    order: 2;
+  }
+  .error_logo {
+    height: 24px;
+  }
+  .error_text {
+    color: #ff0000;
+    height: 24px;
+    font-weight: 700;
+  }
+}

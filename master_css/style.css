@@ -1,0 +1,451 @@
+*{
+    box-sizing: border-box;
+    font-size: 16px;
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.empty{
+    width: 100%;
+    height: 122vh;
+}
+.header{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    height: 8rem;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 10;
+}
+.logo{
+    width: 30%;
+    margin-left:auto;
+    margin-right: auto;
+}
+.logo a svg {
+    max-width: 50%;
+}
+.logo a text tspan{
+    font-size: 2rem;
+}
+.links{
+    width: 60%;
+    display: flex;
+    justify-content: flex-end;
+    padding-right: 4rem;
+    gap: 3rem
+}
+.links a{
+    text-decoration: none;
+    font-size: 1rem;
+    padding: 0.7rem 1.2rem;
+    background-color: #ffae00;
+    border: 3px solid #ffae00;
+    color: white;
+    font-weight: 900;
+    border-radius: 0.5rem;
+    transition: .3s;
+}
+#login{
+    background-color: transparent;
+    border: 3px solid #ffae00;
+    color: #ffae00;
+    font-weight: 900;
+    transition: 0.3s;
+
+}
+#login:hover{
+    background-color: #ffae00;
+    border: 3px solid #ffae00;
+    color: white;
+
+}
+.links a:hover{
+    background-color: transparent;
+    border: 3px solid #ffae00;
+    color: #ffae00;
+
+}
+.main{
+    width: 100%;
+    height: 122vh;
+    position: absolute;
+    background: url("../assets/backgroung_curve.svg") ;
+    background-repeat: no-repeat;
+    background-position: top left;
+    background-size: cover;
+    top: 0;
+    left: 0;
+    padding-top:8rem ;
+    display: flex;
+    justify-content: space-evenly;
+}
+.left{
+    max-width: 40%;
+    margin-left: 2rem;
+}
+.text{
+    max-width: 100%;
+    height: 100%;
+    display: flex;
+    align-content: flex-start;
+    flex-direction: column;
+}
+.left h1{
+    margin-top: 5rem;
+    font-size:  2.8rem;
+    color: #543A0D;
+}
+.left h1 span{
+    font-size:  2.9rem;
+    color: #FFAF23;
+}
+.left p{
+    margin-top: 2rem; 
+    font-size: 1.2rem;
+    letter-spacing: 0.1rem;
+    color: #6d675c;
+    font-weight: 900;
+    font-style: italic;
+
+}
+.left .action{
+    margin-top: 3rem;
+    width: 100%;
+}
+.left .action a{
+    margin-top: 2rem;
+    padding: 1rem 2rem;
+    background-color:#FFAF23 ;
+    color: white;
+    font-weight: 900;
+    font-size: 1.2rem;
+    border-radius: 10px  ;
+    text-decoration: none;
+    transition: .3s;
+}
+.left .action a:hover{
+    background-color:transparent ;
+    color: #FFAF23;
+    border: 3px solid #FFAF23;
+}
+.right{
+    width: 45%;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    margin-top: 5rem;
+
+}
+.right img{
+    max-width:80%;
+
+}
+.center{
+    width: 5%;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    align-content: center;
+}
+.center img{
+    width: 80%;
+}
+.adventages{
+    max-width: 95%;
+    margin: 1rem 4rem 7rem 4rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+.card{
+    MAX-width: 25%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 1rem;
+    border-radius: 2rem;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 20px 25px -5px, rgba(0, 0, 0, 0.04) 0px 10px 10px -5px;
+}
+.card .title{
+    color: #FFAF23;
+    font-size: 2rem;
+    font-weight: 700;
+}
+.card .image{
+    max-width: 100%;
+}
+.card .image img{
+    max-width: 100%;
+}
+.card .desc{
+    text-align: center;
+    font-weight: 500;
+    font-size: 1.3rem;
+    color: #585246;
+}
+.placeholder{
+    width: 80%;
+    height: 10rem;
+    border-radius: 2rem;
+    background-color: #a86b00;
+}
+.aboutUs{
+    max-width: 95%;
+    margin: 3rem 4rem 1rem 5rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    margin-bottom: 1rem;
+    padding: 2rem 3rem;
+    background-color: #fff8d2;
+    border-radius: 2rem;
+}
+
+.stiky{
+    max-width: 30%;
+}
+.stiky img{
+    width: 70%;
+}
+.info{
+    width: 60%;
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: column;
+}
+.info .titre{
+    width: 30%;
+    padding-bottom: 1rem;
+    font-size: 2rem;
+    color: #FFAe00;
+    font-weight: 700;
+    border-bottom: 3px solid #ffae00;
+}
+.info .us{
+    font-size: 1.1rem;
+    color: #585246;
+    font-weight: 500;
+}
+
+
+.holder{
+    width: 100%;
+    margin-top: 4rem;
+
+}
+.back{
+    max-width: 100%;
+    position: relative;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+.back svg{
+    position: absolute;
+    width: 100%;
+
+}
+.footer{
+    width: 100%;
+    height: auto;
+    margin-top: 7rem;
+    padding: 4rem;
+   background:url(../assets/footer_curves.svg);
+   background-repeat: no-repeat;
+   background-position: center left;
+   background-size:cover ;
+   display: flex;
+   justify-content: space-evenly;
+   align-items: center;
+}
+.footer_container{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+.footer_section{
+    width: 20%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+}
+.footer_title{
+    text-align: center;
+    font-size: 1.4rem;
+    color: #FFAe00;
+    font-weight: 700;
+}
+.footer_section a{
+    text-decoration: none;
+    margin-top: .1rem;
+    font-size: 1.2rem;
+    padding: 0.5rem 1rem;
+    color:#585246 ;
+    font-weight: 900;
+}
+
+
+
+
+#logo2{
+    text-align: center;
+    vertical-align: middle;
+    margin-top: 3rem;
+}
+/* ########################################### */
+
+@media (min-width: 1600px) {
+   html{
+       font-size: 140%;
+   }
+   .main{
+        height: 100vh;
+        width: 100%;
+        padding-left :10% ;
+        padding-right: 10%;
+
+   }
+   .logo a text tspan {
+    font-size: 1.5rem;
+    }
+
+  }
+  @media (max-width: 1600px) {
+
+    html{
+        font-size: 110%;
+    }
+    .main{
+        height: 130vh;
+        padding-top: 5rem ;
+    }
+    .center{
+        height: 73%;
+}
+    }
+    .empty{
+        height: 130vh;
+    }
+  
+  @media (max-width: 1030px) {
+    html{
+        font-size: 80%;
+    }
+    .empty{
+        width: 100%;
+    }
+  }
+  
+  @media only screen and (max-width: 768px) {
+    .empty{
+        height:110vh;
+    }
+    .main{
+        height: 100vh;
+    }
+    .center{
+     margin: 0;
+     display: none;
+    }
+    .adventages{
+        flex-direction: column;
+    }
+    .card{
+        max-width: 85%;
+        margin-top: 2rem;
+        text-align: center;
+        margin-left: auto;
+        margin-right: auto;
+    }
+  }
+  
+  @media only screen and (max-width: 620PX) {
+    html{
+        font-size: 60%;
+    }
+    .main{ 
+        flex-direction: column;
+        align-items: center;
+    }
+    .right{
+        order: 1;
+        width:88% ;
+    }
+    .right img{
+        max-width:70%
+    }
+    .left{
+        order: 2;
+        max-width:80% ;
+    }
+    .text{
+        max-width: 100%;
+    }
+    .center{
+        display: none;
+    }
+    .empty{
+        height: 110vh;
+    }
+    .left p {
+        display: none;
+    }
+    .left h1{
+        text-align: center;
+    }
+    .left .action{
+        text-align: center;
+    }
+    .adventages{
+        flex-direction: column;
+    }
+    .card{
+        max-width: 85%;
+        margin-top: 2rem;
+        text-align: center;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .aboutUs{
+        flex-direction: column;
+        align-items: center;
+    }
+    .info .titre {
+        width: 100%;
+  }
+  .info{
+      width: 100%;
+  }
+  .info .us{
+      margin-top: 1rem;
+  }
+  .footer_container{
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    flex-direction: column;
+    align-items: center;
+  }
+  .footer{
+      padding-bottom:1rem ;
+  }
+  .footer_section{
+      width: 100%;
+  }
+  #logo2{
+    width: 100%;
+    text-align: center;
+  }
+  .logo a text tspan{
+      font-size: 3rem;
+  }
+
+}
