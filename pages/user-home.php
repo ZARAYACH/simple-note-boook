@@ -28,9 +28,187 @@
         $email = $_SESSION['email'];
         $last_name = $_SESSION['lastname'];
         $first_name = $_SESSION['firstname'];
+        
+        $files_img = scandir('../usersimg/');
+        foreach($files_img as $image){
+          $pattern = "/^($username)/";
+          if(preg_match($pattern,$image)==1){
+            $titre = explode("à",$image);
+            if($titre[0] = $username){
+              $img_profil ="../usersimg/".$image;
+            }
+
+        }
+
     }
+    if(isset($_GET['saved'])){
+      if($_GET['saved']=="True"){
+        echo("<script> 
+        let message ='Your note has been  saved with success'; 
+        let pop_up = `<div class='pop_up'>
+        <div class='x'><button id='close'><img src='../assets/close_black_24dp.svg' alt=''></button></div>
+        <div class='message'>
+            <img src='../assets/done_black_24dp.svg' alt=''>
+            <p>\${message}</p></div>
+      </div>`
+       document.write(pop_up);
+       let dd = document.querySelector('.pop_up');
+       let close_button = document.querySelector('#close');
+       close_button.addEventListener('click',function(){
+        dd.classList.remove('get_out');
+    })
+       setTimeout(function(){
   
+         dd.classList.add('get_out');
+       },500)
+       setTimeout(function(){
+         dd.classList.remove('get_out');
+     },5000);
+        
+      </script>");
+      }
+    }else if(isset($_GET['error'])){
+        if($_GET['error']=='deleteWithSuccess'){
+          echo("<script> 
+          let message ='Your note has been deleted'; 
+          let pop_up = `<div class='pop_up'>
+          <div class='x'><button id='close'><img src='../assets/close_black_24dp.svg' alt=''></button></div>
+          <div class='message'>
+              <img src='../assets/done_black_24dp.svg' alt=''>
+              <p>\${message}</p></div>
+        </div>`
+         document.write(pop_up);
+         let dd = document.querySelector('.pop_up');
+         let close_button = document.querySelector('#close');
+         close_button.addEventListener('click',function(){
+          dd.classList.remove('get_out');
+      })
+         setTimeout(function(){
     
+           dd.classList.add('get_out');
+         },500)
+         setTimeout(function(){
+           dd.classList.remove('get_out');
+       },5000);
+          
+        </script>");
+        }
+    
+       }
+        if(isset($_GET['saved'])){
+          if($_GET['saved']=="nope"){
+          echo("<script> 
+          let message ='Your note has not been saved repeat later'; 
+          let pop_up = `<div class='pop_up'>
+          <div class='x'><button id='close'><img src='../assets/close_black_24dp.svg' alt=''></button></div>
+          <div class='message'>
+              <img src='../assets/error2.svg' alt=''>
+              <p>\${message}</p></div>
+        </div>`
+         document.write(pop_up);
+         let dd = document.querySelector('.pop_up');
+         dd.style.backgroundColor = '#bd362f';
+         let close_button = document.querySelector('#close');
+         close_button.addEventListener('click',function(){
+          dd.classList.remove('get_out');
+      })
+         setTimeout(function(){
+    
+           dd.classList.add('get_out');
+         },500)
+         setTimeout(function(){
+           dd.classList.remove('get_out');
+       },5000);
+          
+        </script>");
+        }
+      }
+      if(isset($_GET['saved'])){
+        if($_GET['saved']=="changeTItre"){
+        echo("<script> 
+        let message ='please change your note title'; 
+        let pop_up = `<div class='pop_up'>
+        <div class='x'><button id='close'><img src='../assets/close_black_24dp.svg' alt=''></button></div>
+        <div class='message'>
+            <img src='../assets/error2.svg' alt=''>
+            <p>\${message}</p></div>
+      </div>`
+       document.write(pop_up);
+       let dd = document.querySelector('.pop_up');
+       dd.style.backgroundColor = '#bd362f';
+       let close_button = document.querySelector('#close');
+       close_button.addEventListener('click',function(){
+        dd.classList.remove('get_out');
+    })
+       setTimeout(function(){
+  
+         dd.classList.add('get_out');
+       },500)
+       setTimeout(function(){
+         dd.classList.remove('get_out');
+     },5000);
+        
+      </script>");
+      }
+    }
+    if(isset($_GET['error'])){
+      if($_GET['error']=="deleteWithFailure"){
+      echo("<script> 
+      let message ='your note has not been deleted please repeat later '; 
+      let pop_up = `<div class='pop_up'>
+      <div class='x'><button id='close'><img src='../assets/close_black_24dp.svg' alt=''></button></div>
+      <div class='message'>
+          <img src='../assets/error2.svg' alt=''>
+          <p>\${message}</p></div>
+    </div>`
+     document.write(pop_up);
+     let dd = document.querySelector('.pop_up');
+     dd.style.backgroundColor = '#bd362f';
+     let close_button = document.querySelector('#close');
+     close_button.addEventListener('click',function(){
+      dd.classList.remove('get_out');
+  })
+     setTimeout(function(){
+
+       dd.classList.add('get_out');
+     },500)
+     setTimeout(function(){
+       dd.classList.remove('get_out');
+   },5000);
+      
+    </script>");
+    }
+  }
+  if(isset($_GET['error'])){
+    if($_GET['error']=='savedImg'){
+      echo("<script> 
+      let message ='Your image is saved successfully'; 
+      let pop_up = `<div class='pop_up'>
+      <div class='x'><button id='close'><img src='../assets/close_black_24dp.svg' alt=''></button></div>
+      <div class='message'>
+          <img src='../assets/done_black_24dp.svg' alt=''>
+          <p>\${message}</p></div>
+    </div>`
+     document.write(pop_up);
+     let dd = document.querySelector('.pop_up');
+     let close_button = document.querySelector('#close');
+     close_button.addEventListener('click',function(){
+      dd.classList.remove('get_out');
+  })
+     setTimeout(function(){
+
+       dd.classList.add('get_out');
+     },500)
+     setTimeout(function(){
+       dd.classList.remove('get_out');
+   },5000);
+      
+    </script>");
+    }
+
+   }
+    
+      
   
 ?>
 <!DOCTYPE html>
@@ -50,8 +228,8 @@
               <input  type="text" name="titre" id="titre" placeholder="write a title for your note">
               <textarea name="note" id="note" placeholder="write your notes here ..."></textarea>
               <div class="div" class="exep">
-                <input type="submit" name="save-note" value="Save">
-                <input type="reset">
+                <input type="Submit" name="save-note" value="Save">
+                <input value="Reset" type="reset">
               </div>
             </form>
             
@@ -75,14 +253,24 @@
 
   <!-- the beggining of real page -->
     <div class="header">
-        <div class="dashbord">Dashbord</div>
+        <div class="dashbord">Dashboard</div>
              <div class="search">
             <form action="../pages/user-home.php" method="get"> <input name="search" type="text" placeholder="Search">
-                              <input type="submit" value="search">  
+            <input type="submit" value="search">  
           </form>
         </div>
         <div class="user">
-            <div class="profil"><img src="../assets/i168238-msemen.jpeg" alt=""></div>
+            <div class="profil"><img src=<?php
+             if(empty($img_profil))
+             { 
+               echo ('../usersimg/i168238-msemen.jpeg');
+              }
+              else
+              {
+                echo("$img_profil");
+                } 
+              }
+                ?> alt=''></div>
             <div class="user-name"><?php echo($_SESSION['firstname']); ?><br><?php echo($_SESSION['lastname']); ?></div>
         </div>
         </div>
@@ -156,6 +344,7 @@ Log out</button>
           // do some searching
           $search = $_GET["search"];
           $files = scandir('../note_user/');
+          $j= 0;
           foreach ($files as $file) {
               $pattern = "/^($username)/";
             if(preg_match($pattern,$file)==1){
@@ -171,6 +360,7 @@ Log out</button>
                     if(preg_match($pattern2,$searchingTitle)==1){
                       $con=file_get_contents("../note_user/".$file);
                       $real_titre_note = $searchingTitle;
+                      $j = $j +1;
 
                     }
                       }
@@ -182,17 +372,57 @@ Log out</button>
               
             }
             if(empty($real_titre_note)){
-              echo("doesn't exist");
+              echo("<script> 
+
+              let message ='this note does not exists '; 
+              let pop_up = `<div class='pop_up'>
+              <div class='x'><button id='close'><img src='../assets/close_black_24dp.svg' alt=''></button></div>
+              <div class='message'>
+                  <img src='../assets/error2.svg' alt=''>
+                  <p>\${message}</p></div>
+            </div>`
+             document.write(pop_up);
+             let dd = document.querySelector('.pop_up');
+             dd.style.backgroundColor = '#bd362f';
+             dd.style.top = '8rem'
+             let close_button = document.querySelector('#close');
+             close_button.addEventListener('click',function(){
+              dd.classList.remove('get_out');
+          })
+             setTimeout(function(){
+        
+               dd.classList.add('get_out');
+             },500)
+             setTimeout(function(){
+               dd.classList.remove('get_out');
+           },50000);
+              
+            </script>");
             }else{
               echo("<div class='note'>
               <div class='note_header'>
-              <a class='delete_button' onclick=delete_approve('$real_titre_note')  > <svg xmlns='http://www.w3.org/2000/svg' title=$real_titre_note height='24px' viewBox='0 0 24 24' width='24px' ><path d='M0 0h24v24H0V0z' fill='none'/><path d='M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zM8 9h8v10H8V9zm7.5-5l-1-1h-5l-1 1H5v2h14V4z'/></svg> </a>
-              </div>
-            <div class='title_note'>$real_titre_note</div>
-            <div class='main_note'>$con</div>
-            </div>");
-          }
-        }else if(isset($_GET['settings'])){
+              <a id='del$j' class='delete_button'><svg xmlns='http://www.w3.org/2000/svg'  height='24px' viewBox='0 0 24 24' width='24px' ><path d='M0 0h24v24H0V0z' fill='none'/><path d='M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zM8 9h8v10H8V9zm7.5-5l-1-1h-5l-1 1H5v2h14V4z'/></svg> </a>
+              </div><script>
+              let deee$j = document.querySelector('#del$j');
+              let file_titre$j = '$real_titre_note';
+              deee$j.addEventListener('click',function(){
+               overlay2.classList.add('to_display');
+               delete_note.classList.add('to_display');
+       
+             let user = '$username'
+             let file_name$j = '../note_user/'+user+'#'+file_titre$j+'.txt';
+             console.log(file_name$j);
+             let in_his = document.querySelector('#to_be_delete');
+             in_his.setAttribute('value',file_name$j);
+       
+              })
+              </script>
+              <div class='title_note'>$real_titre_note</div>
+              <div class='main_note'>$con</div>
+              </div>");
+            }
+            
+          }else if(isset($_GET['settings'])){
             echo("
           <div class='settings'>
           <div class='header_settings'>Setting</div>
@@ -206,8 +436,12 @@ Log out</button>
             <div class='label'>Email :</div>
             <div class='user_info'>$email</div>
             <div class='label'>gender:</div>
+            <div class='user_info'></div>
             <form action='../auth/savephoto.inc.php' method='POST' enctype='multipart/form-data' >
+                <div class='wrapp'>
                 <input type='file' name='photo' id=''>
+                <div class='user_info'></div>
+                </div>
                 <input type='submit' name='save' value='save'>
             </form>
           </div>
@@ -217,6 +451,7 @@ Log out</button>
         else
         {
           $files = scandir('../note_user/');
+          $j=0;
           foreach ($files as $file) {
               $pattern = "/^($username)/";
             if(preg_match($pattern,$file)==1){
@@ -228,21 +463,40 @@ Log out</button>
                     for ($i=0; $i <sizeof($titreWithoutEX) ; $i++) { 
                           if($i==0){
                             $real_titre_note = $titreWithoutEX[$i];
+                            $j = $j+1;
                           }
                     }
                   }
               }
+              
               echo("<div class='note'>
               <div class='note_header'>
-              <a class='delete_button' onclick=delete_approve('$real_titre_note')  > <svg xmlns='http://www.w3.org/2000/svg' title=$real_titre_note height='24px' viewBox='0 0 24 24' width='24px' ><path d='M0 0h24v24H0V0z' fill='none'/><path d='M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zM8 9h8v10H8V9zm7.5-5l-1-1h-5l-1 1H5v2h14V4z'/></svg> </a>
-              </div>
+              <a id='del$j' class='delete_button'><svg xmlns='http://www.w3.org/2000/svg'  height='24px' viewBox='0 0 24 24' width='24px' ><path d='M0 0h24v24H0V0z' fill='none'/><path d='M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zM8 9h8v10H8V9zm7.5-5l-1-1h-5l-1 1H5v2h14V4z'/></svg> </a>
+              </div><script>
+              let deee$j = document.querySelector('#del$j');
+              let file_titre$j = '$real_titre_note';
+              deee$j.addEventListener('click',function(){
+               overlay2.classList.add('to_display');
+               delete_note.classList.add('to_display');
+       
+             let user = '$username'
+             let file_name$j = '../note_user/'+user+'#'+file_titre$j+'.txt';
+             console.log(file_name$j);
+             let in_his = document.querySelector('#to_be_delete');
+             in_his.setAttribute('value',file_name$j);
+       
+              })
+              </script>
               <div class='title_note'>$real_titre_note</div>
               <div class='main_note'>$con</div>
               </div>");
             }
+         
           }
     
         }
+
+        
 
       ?>
     
@@ -260,7 +514,8 @@ Log out</button>
       let file_name = '../note_user/'+user+'#'+ real_note_titre+'.txt';
       let in_his = document.querySelector("#to_be_delete");
       in_his.setAttribute('value',file_name);
-}
+       
+          }
   </script>
 </body>
 </html>

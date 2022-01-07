@@ -6,17 +6,19 @@ if(isset($_POST["titre"])){
     $username=$_SESSION['username'];
     $note_path="../note_user/$username#$title.txt";
     $fp = fopen($note_path,"w");
-    fwrite($fp,$_POST['note']);
+    if($fp!=false){
+      fwrite($fp,$_POST['note']);
     fclose($fp);
     if(file_exists($note_path)){
       header ("location:..\pages\user-home.php?saved=True");
       exit();
     }else{
-        header ("location:..\pages\user-home.php?saved=False");
+        header ("location:..\pages\user-home.php?saved=nope");
         exit();
     }
   }else{
-    header ("location:..\pages\user-home.php?saved=SOMESHITWENRWRONG");
+    header ("location:..\pages\user-home.php?saved=changeTItre");
         exit();
 
   }
+    }

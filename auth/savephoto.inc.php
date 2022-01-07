@@ -1,10 +1,19 @@
 <?php 
     $username = $_COOKIE['username'];
         if(isset($_FILES['photo'])){
-         $name =$username."#".$_FILES['photo']['name'];
-         print_r($_FILES['photo']);
+         $name =$username."à".$_FILES['photo']['name'];
          $temp = $_FILES['photo']["tmp_name"];
-         echo ($_FILES['photo']['error']);
-         $destination = "../users_img/$name";
-         move_uploaded_file($temp,$destination);
+         $destination = "../usersimg/$name";
+        if(move_uploaded_file($temp,$destination)){
+            header("location:../pages/user-home.php?error=savedImg");
+            exit();
+        }else{
+            header("location:../pages/user-home.php?error=unsavedImg");
+            exit();
+        } 
+        }
+        else
+        {
+            header("location : ../pages/user-home.php?error=wrongWay");
+            exit();
         }
