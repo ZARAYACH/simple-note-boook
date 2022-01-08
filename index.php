@@ -65,13 +65,13 @@ Note Book" transform="translate(265 53)" fill="#707070" font-size="32" font-fami
       </div>
     <div class="card">
       <div class="title">Easy to Use</div>
-      <div class="image"> <div class="placeholder"></div></div>
-      <div class="desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium voluptate magni quaerat modi commodi sit beatae placeat. Nihil, recusandae nulla.</div>
+      <div class="image"> <div class="placeholder"><img src="./assets/4379583.png" alt=""></div></div>
+      <div class="desc">Lorem ipsum dolor sit amet consectetur adipisicing elit</div>
     </div>
     <div class="card">
       <div class="title">Secure</div>
-      <div class="image"><div class="placeholder"></div> </div>
-      <div class="desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellendus molestiae repellat necessitatibus, laboriosam quaerat nemo iure perferendis inventore! Repellat, reiciendis?</div>
+      <div class="image"><div class="placeholder"><img src="./assets/6325-removebg-preview.png" alt=""></div> </div>
+      <div class="desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit</div>
     </div>
 
   </div>
@@ -137,6 +137,5 @@ Note Book" transform="translate(265 53)" fill="#707070" font-size="32" font-fami
         </div>
   </div>
   </div>
-    <script src="./master_js/script.js" defer></script>
 </body>
 </html>

@@ -4,7 +4,7 @@ body {
   box-sizing: border-box;
   font-family: "Nunito", sans-serif;
   font-size: 16px;
-  background-color: #fae08d;
+  background-image: url("../assets/26684.jpg");
   background-position: center;
   background-size: cover;
 }
@@ -112,9 +112,7 @@ body {
 }
 .signup-container {
   width: 50%;
-  background-image: url("../assets/abstract-luxury-clear-yellow-wall-well-use-as-backdrop-background-and-layout\ \(1\).jpg");
-  background-position: center;
-  background-size: cover;
+  background-color: #ffc400;
   text-align: center;
   box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
 }
@@ -193,7 +191,7 @@ body {
     height: 25rem;
   }
   .login-container {
-    width: 50%;
+    width: 100%;
     order: 2;
     box-shadow: rgba(0, 0, 0, 0.25) 2.4px 2.4px 3.9px;
     display: flex;
@@ -473,7 +471,7 @@ body {
     height: 25rem;
   }
   .login-container {
-    width: 50%;
+    width: 100%;
     order: 2;
     box-shadow: rgba(0, 0, 0, 0.25) 2.4px 2.4px 3.9px;
     display: flex;

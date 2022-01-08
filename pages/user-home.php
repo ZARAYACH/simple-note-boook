@@ -39,7 +39,7 @@
             }
 
         }
-
+      }
     }
     if(isset($_GET['saved'])){
       if($_GET['saved']=="True"){
@@ -207,6 +207,34 @@
     }
 
    }
+   if(isset($_GET['saved'])){
+    if($_GET['saved']=="imptyinput"){
+    echo("<script> 
+    let message ='please file your note we connot save impty note'; 
+    let pop_up = `<div class='pop_up'>
+    <div class='x'><button id='close'><img src='../assets/close_black_24dp.svg' alt=''></button></div>
+    <div class='message'>
+        <img src='../assets/error2.svg' alt=''>
+        <p>\${message}</p></div>
+  </div>`
+   document.write(pop_up);
+   let dd = document.querySelector('.pop_up');
+   dd.style.backgroundColor = '#bd362f';
+   let close_button = document.querySelector('#close');
+   close_button.addEventListener('click',function(){
+    dd.classList.remove('get_out');
+})
+   setTimeout(function(){
+
+     dd.classList.add('get_out');
+   },500)
+   setTimeout(function(){
+     dd.classList.remove('get_out');
+ },5000);
+    
+  </script>");
+  }
+}
     
       
   
@@ -269,7 +297,6 @@
               {
                 echo("$img_profil");
                 } 
-              }
                 ?> alt=''></div>
             <div class="user-name"><?php echo($_SESSION['firstname']); ?><br><?php echo($_SESSION['lastname']); ?></div>
         </div>
@@ -411,7 +438,6 @@ Log out</button>
        
              let user = '$username'
              let file_name$j = '../note_user/'+user+'#'+file_titre$j+'.txt';
-             console.log(file_name$j);
              let in_his = document.querySelector('#to_be_delete');
              in_his.setAttribute('value',file_name$j);
        
@@ -425,7 +451,7 @@ Log out</button>
           }else if(isset($_GET['settings'])){
             echo("
           <div class='settings'>
-          <div class='header_settings'>Setting</div>
+          <div class='header_settings'>Settings</div>
           <div class='info'>
             <div class='label' > Username : </div>
             <div class='user_info'>$username</div>
@@ -435,17 +461,17 @@ Log out</button>
             <div class='user_info'>$last_name</div>
             <div class='label'>Email :</div>
             <div class='user_info'>$email</div>
-            <div class='label'>gender:</div>
-            <div class='user_info'></div>
-            <form action='../auth/savephoto.inc.php' method='POST' enctype='multipart/form-data' >
+             <form action='../auth/savephoto.inc.php' method='POST' enctype='multipart/form-data' >
                 <div class='wrapp'>
-                <input type='file' name='photo' id=''>
-                <div class='user_info'></div>
+                <div class='label'>choose your profile image</div>
+               <div class = 'user_info'><label class='lll' for='photo'>CHOOSE</label> <input type='file' name='photo' id='photo'></div>
                 </div>
                 <input type='submit' name='save' value='save'>
             </form>
           </div>
         </div>
+        <script> let button = document.querySelector('.toAdd');
+        button.classList.add('ff');</script>
                   ");
         }
         else
@@ -481,7 +507,6 @@ Log out</button>
        
              let user = '$username'
              let file_name$j = '../note_user/'+user+'#'+file_titre$j+'.txt';
-             console.log(file_name$j);
              let in_his = document.querySelector('#to_be_delete');
              in_his.setAttribute('value',file_name$j);
        

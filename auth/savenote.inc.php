@@ -1,7 +1,7 @@
 <?php
 session_start();
 
-if(isset($_POST["titre"])){
+if(!empty($_POST["titre"]) and !empty($_POST['note'])){
     $title=$_POST["titre"];
     $username=$_SESSION['username'];
     $note_path="../note_user/$username#$title.txt";
@@ -21,4 +21,10 @@ if(isset($_POST["titre"])){
         exit();
 
   }
+    }
+    else
+    {
+      header ("location:..\pages\user-home.php?saved=imptyinput");
+          exit();
+  
     }
