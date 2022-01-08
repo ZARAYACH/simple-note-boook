@@ -291,7 +291,7 @@
             <div class="profil"><img src=<?php
              if(empty($img_profil))
              { 
-               echo ('../usersimg/i168238-msemen.jpeg');
+               echo ('../assets/i168238-msemen.jpeg');
               }
               else
               {
